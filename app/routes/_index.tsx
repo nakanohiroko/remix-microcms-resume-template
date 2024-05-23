@@ -19,7 +19,7 @@ export const loader: LoaderFunction = async () => {
 export default function Index() {
   const data = useLoaderData<Content>();
   return (
-    <div className="min-h-screen p-10 font-MPLUS1p pt-16 pb-16" style={{ backgroundColor: "#" + data.backgroundColor, color: "#" + data.textColor }}>
+    <div className="min-h-screen p-10 font-MPLUS1p pt-16 pb-16">
       <div className="w-full max-w-4xl m-auto">
         <h1 className="text-center text-4xl mb-10 font-bold tracking-[.35em]">職務経歴書</h1>
         <h3 className="text-right mb-10">{formatDate(data.lastUpdate)}</h3>
@@ -62,13 +62,13 @@ export default function Index() {
             </div>
           ))}
         </div>
-        <div className="leading-loose mb-14">
+        <div className="leading-loose mb-20">
           <h3 className="text-2xl font-bold mb-4">職務経歴</h3>
           {data.careers && data.careers.map((career,index) => (
             <div key={index} className="mb-6">
               <h4 className="text-xl font-medium mb-1">{career.company}
               {career.period &&
-              <span>（在席期間：{career.period}年）</span>
+              <span>（在席期間：{career.period}）</span>
               }
               </h4>
               {career.business &&
@@ -83,12 +83,12 @@ export default function Index() {
                 }
               </div>
               {career.projects && career.projects.map((project,index) => (
-                <div key={index} className="mb-6 border-solid border-[1px] p-6 border-black">
-                  <h4 className="text-lg font-bold mb-1">{project.name}</h4>
+                <div key={index} className="mb-12 p-6" style={{ border: "1px solid #" + data.textColor }}>
+                  <h4 className="text-xl font-medium mb-1">{project.name}</h4>
                   {project.period &&
-                    <h5 className="mb-6">期間：{project.period}年</h5>
+                    <h5 className="mb-6">期間：{project.period}</h5>
                   }
-                  <div dangerouslySetInnerHTML={{ __html: project.content }} />
+                  <div className="project-detail" dangerouslySetInnerHTML={{ __html: project.content }} />
                 </div>
               ))}
             </div>

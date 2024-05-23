@@ -3,3 +3,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .project-detail h4 {
+    @apply font-medium text-lg
+  }
+  .project-detail ul {
+    @apply list-disc ml-4
+  }
+  /* ... */
+}
