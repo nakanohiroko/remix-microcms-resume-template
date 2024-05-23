@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
     },
     fontFamily: {
-      NotoSansJP: ['Noto Sans JP', 'sans-serif'],
+      MPLUS1p: ['M PLUS 1p', 'sans-serif'],
     }
   },
   plugins: [],
