@@ -8,7 +8,7 @@ microCMSで編集可能な職務経歴書
 ## 環境情報
 
 - 本番環境
-  - 
+  - https://remix-microcms-resume-template.vercel.app
 
 ## microCMSのAPIスキーマ設定
 ### コンテンツ
