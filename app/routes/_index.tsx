@@ -4,10 +4,10 @@ import { client } from "~/libs/client.sever";
 import { formatDate } from "~/libs/util";
 import type { Content } from "~/types/content";
 
-export const meta: MetaFunction = () => {
+export const meta: MetaFunction = ({data}) => {
   return [
     { title: "職務経歴書" },
-    { name: "description", content: "Welcome to Remix!" },
+    { name: "description", content: data.name + "の職務経歴書です" },
   ];
 };
 
