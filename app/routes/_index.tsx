@@ -1,6 +1,6 @@
 import type { MetaFunction, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { client } from "~/libs/client.sever";
+import { client } from "~/libs/client.server";
 import { formatDate } from "~/libs/util";
 import type { Content } from "~/types/content";
 

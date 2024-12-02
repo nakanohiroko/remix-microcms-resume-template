@@ -9,7 +9,7 @@ import {
 
 import type { LinksFunction, LoaderFunction } from "@remix-run/node";
 import stylesheet from "~/tailwind.css?url";
-import { client } from "~/libs/client.sever";
+import { client } from "~/libs/client.server";
 import type { Content } from "~/types/content";
 
 export const links: LinksFunction = () => [
